@@ -71,7 +71,6 @@ Switch basic/security, SSH and line configurations. Verfiy and save result on MS
 Switch>en <br/>
 Switch#conf t <br/>
 Switch(config)#hostname MS1 <br/>
-MS1(config)#security passwords min-length 5 <br/>
 MS1(config)#service password-encryption <br/>
 MS1(config)#login block-for 60 attempts 3 within 30 <br/>
 MS1(config)#enable secret PASSWORD <br/>
@@ -87,15 +86,17 @@ MS1(config-line)#password PASSWORD <br/>
 MS1(config-line)#login <br/>
 MS1(config-line)#logging synchronous <br/>
 MS1(config-line)#exec-timeout 15 0 <br/>
-MS1(config)#line vty 0 4 <br/>
+MS1(config)#line vty 0 15 <br/>
 MS1(config-line)#password PASSWORD <br/>
 MS1(config-line)# login local <br/>
 MS1(config-line)#logging synchronous <br/>
 MS1(config-line)#exec-timeout 15 0 <br/>
 MS1(config-line)# transport input ssh <br/>
-MS1(config)#do show running-config <br/>
+MS1(config)#do show run <br/>
 MS1#wr <br/>
-<img src="https://i.imgur.com/VtmYWLI.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/1fA73sK.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/NwzxcPO.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/bLpRQgD.png" height="80%" width="80%" />
 <br />
 <br />
 
