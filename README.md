@@ -20,7 +20,7 @@ Simulate Network Home Lab with Cisco Packet Tracer. Configure 3 routers with SSH
 - <b>Cisco 5506-X ASA</b> (22H2) <br />
 
 <h2>Diagram </h2>
-<img src="https://i.imgur.com/X1JOLQk.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/1vr89vZ.png" height="80%" width="80%" />
 
 <h2>Walk-through:</h2>
 <p align="center">
@@ -100,9 +100,14 @@ MS1#wr <br/>
 <img src="https://i.imgur.com/bLpRQgD.png" height="80%" width="80%" />
 <br />
 <br />
-Configure R2 to be DHCP server
-R2(config)#ip dhcp pool LAN2
-R2(dhcp-config)#network 172.16.0.8 255.255.255.252
-R2(dhcp-config)#default-router 172.16.0.9
-R2(dhcp-config)#dns-server 10.10.10.4
-R2(dhcp-config)#domain-name corpdomain.com
+Configure static IP addressing on routers per diagram. Verify results and repeat for all router interfaces: <br/>
+R1(config)#interface G0/0 <br/>
+R1(config)#ip address 172.16.0.1 255.255.255.252  <br/>
+R1(config)#description ## to MS1 ## <br/>
+R1(config)#no shutdown <br/>
+R1(config)#do wr <br/>
+<img src="https://i.imgur.com/ginOOqb.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/7AEoAWH.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/RGOV5Ah.png" height="80%" width="80%" />
+<br />
+<br />
