@@ -42,6 +42,7 @@ R1(config)#security passwords min-length 5 <br/>
 R1(config)#service password-encryption <br/>
 R1(config)#login block-for 60 attempts 3 within 30 <br/>
 R1(config)#enable secret PASSWORD <br/>
+R1(config)#no ip domain-lookip <br/>
 R1(config)#banner motd b <br/>
 Enter: HELLO b <br/>
 R1(config)# username jwczerwinski <br/>
