@@ -38,17 +38,17 @@ R1(config)# ip domain-name R1.COM <br/>
 R1(config)# crypto key generate rsa <br/>
 Enter: 1024 <br/>
 R1(config)# ip ssh version 2 <br/>
-R1(config)#line console 0
-R1(config-line)#password PASSWORD
-R1(config-line)#login
-R1(config-line)#logging synchronous
-R1(config-line)#exec-timeout 15 0
-R1(config)#line vty 0 4
-R1(config-line)#password PASSWORD
-R1(config-line)#login
-R1(config-line)#logging synchronous
-R1(config-line)#exec-timeout 15 0
-R1(config-line)# login local
+R1(config)#line console 0 <br/>
+R1(config-line)#password PASSWORD <br/>
+R1(config-line)#login <br/>
+R1(config-line)#logging synchronous <br/>
+R1(config-line)#exec-timeout 15 0 <br/>
+R1(config)#line vty 0 4 <br/>
+R1(config-line)#password PASSWORD <br/>
+R1(config-line)#login <br/>
+R1(config-line)#logging synchronous <br/>
+R1(config-line)#exec-timeout 15 0 <br/>
+R1(config-line)# login local <br/>
 R1(config)#do show running-config <br/>
 <img src="https://i.imgur.com/yiOfSjt.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/WOn3j9G.png" height="80%" width="80%" />
