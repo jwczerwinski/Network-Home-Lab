@@ -24,7 +24,7 @@ Drag and frop devices as seen in the diagram. Connect devices with appropriate c
 <img src="https://i.imgur.com/oL73dBm.png" height="80%" width="80%" />
 <br />
 <br />
-Router basic/security, SSH and line configurations. Verfiy results on R1. Repeat process on all routers: <br/>
+Router basic/security, SSH and line configurations. Verfiy and save result on R1. Repeat process on all routers: <br/>
 Router>en <br/>
 Router#conf t <br/>
 Router(config)#hostname R1 <br/>
@@ -50,6 +50,7 @@ R1(config-line)#logging synchronous <br/>
 R1(config-line)#exec-timeout 15 0 <br/>
 R1(config-line)# login local <br/>
 R1(config)#do show running-config <br/>
+R1#wr <br/>
 <img src="https://i.imgur.com/yiOfSjt.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/WOn3j9G.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/bua1WW5.png" height="80%" width="80%" />
