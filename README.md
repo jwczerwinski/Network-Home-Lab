@@ -33,10 +33,10 @@ R1(config)#service password-encryption <br/>
 R1(config)#login block-for 60 attempts 3 within 30 <br/>
 R1(config)#enable secret PASSWORD <br/>
 R1(config)#banner motd b <br/>
-Enter: HELLO b <br/>
+<b> Enter: HELLO b <br/>
 R1(config)# ip domain-name R1.COM <br/>
 R1(config)# crypto key generate rsa <br/>
-Enter: 1024 <br/>
+<b> Enter: 1024 <br/>
 R1(config)# ip ssh version 2 <br/>
 R1(config)#line console 0 <br/>
 R1(config-line)#password PASSWORD <br/>
