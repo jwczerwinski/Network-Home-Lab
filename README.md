@@ -7,9 +7,9 @@ Simulate Network Home Lab with Cisco Packet Tracer. Configure 3 routers with SSH
 
 - <b>Cisco Packet Tracer</b> (2.2.43) <br />
 
-- <b>Cisco IOS C800 Software, Version 15.2(4)M4</b>  <br />
+- <b>Cisco IOS C2900 Software, Version 15.1(4)M5</b>  <br />
 
-[Software Configuration Guide](https://www.cisco.com/c/en/us/td/docs/routers/access/800/819/software/configuration/Guide/819_SCG.html)<br />
+[Software Configuration Guide](https://www.cisco.com/c/en/us/td/docs/routers/access/1900/software/configuration/guide/Software_Configuration.html)<br />
 
 - <b>Cisco IOS Denali, Catalyst L3 Switch Software, Version 16.3.2</b> <br />
 
@@ -62,9 +62,9 @@ R1(config-line)#exec-timeout 15 0 <br/>
 R1(config-line)# transport input ssh <br/>
 R1(config)#do show running-config <br/>
 R1#wr <br/>
-<img src="https://i.imgur.com/yiOfSjt.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/qKiXYQi.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/bua1WW5.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/zgDDtO9.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/f9lgi5f.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/7gwO5tg.png" height="80%" width="80%" />
 <br />
 <br />
 Switch basic/security, SSH and line configurations. Verfiy and save result on MS1. Repeat process on all switches: <br/>
@@ -97,10 +97,6 @@ MS1#wr <br/>
 <img src="https://i.imgur.com/1fA73sK.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/NwzxcPO.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/bLpRQgD.png" height="80%" width="80%" />
-<br />
-<br />
-Configure Server0 to be DNS server: <br/>
-<img src="https://i.imgur.com/U4xmy6X.png" height="80%" width="80%" />
 <br />
 <br />
 Configure R2 to be DHCP server
