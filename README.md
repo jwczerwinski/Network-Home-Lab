@@ -24,11 +24,18 @@ Drag and frop devices from enviornments used and as seen in the diagram. Connect
 <img src="https://i.imgur.com/oL73dBm.png" height="80%" width="80%" />
 <br />
 <br />
-While installing GNS3 select GNS3 VM, VMware Workstation, and "No" to SolarWinds. Start GNS3, while in the setup wizard, add the GNS3 VM: <br/>
-<img src="https://i.imgur.com/VtmYWLI.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/EmOB8FV.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/DRa1tFv.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/9y7nyWw.png" height="80%" width="80%" />
+Router basic/security, SSH and line configurations. Verfiy results on R1: <br/>
+Router>en <br/>
+Router#conf t <br/>
+Router(config)#hostname R1 <br/>
+R1(config)#security passwords min-length 5 <br/>
+R1(config)#service password-encryption <br/>
+R1(config)#login block-for 60 attempts 3 within 30 <br/>
+R1(config)#enable secret PASSWORD <br/>
+R1(config)#BANNER MOTD B <br/>
+Enter: HELLO B <br/>
+R1(config)#do show running-config <br/>
+<img src="https://i.imgur.com/yiOfSjt.png" height="80%" width="80%" />
 <br />
 <br />
 Import GNS3 Appliance images: See diagram for appliances and NICs: File > Import Appliance > select images "cisco-7200.gns3a", "cisco-asav.gns3a", and "cisco-iosvl2.gns3a": <br/>
