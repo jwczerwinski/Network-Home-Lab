@@ -20,7 +20,7 @@ Simulate Network Home Lab with Cisco Packet Tracer. Configure 3 routers with SSH
 
 <br />
 <br />
-Drag and frop devices from enviornments used and as seen in the diagram. Connect devices with  either cross-over or straight-through cabling: Cross-over - Switch to switch, router to router; Straight through - PC to switch, switch to router; Console - PC to network device (for configuration)): <br/>
+Drag and frop devices as seen in the diagram. Connect devices with appropriate cabling: Cross-over - Switch to switch, router to router; Straight through - PC to switch, switch to router; Console - PC to network device (for configuration)): <br/>
 <img src="https://i.imgur.com/oL73dBm.png" height="80%" width="80%" />
 <br />
 <br />
