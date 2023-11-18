@@ -34,6 +34,7 @@ R1(config)#login block-for 60 attempts 3 within 30 <br/>
 R1(config)#enable secret PASSWORD <br/>
 R1(config)#banner motd b <br/>
 Enter: HELLO b <br/>
+R1(config)# username jwczerwinski <br/>
 R1(config)# ip domain-name corpdomain.com <br/>
 R1(config)# crypto key generate rsa <br/>
 Enter: 1024 <br/>
@@ -49,10 +50,11 @@ R1(config-line)#login <br/>
 R1(config-line)#logging synchronous <br/>
 R1(config-line)#exec-timeout 15 0 <br/>
 R1(config-line)# login local <br/>
+R1(config-line)# transport input ssh <br/>
 R1(config)#do show running-config <br/>
 R1#wr <br/>
 <img src="https://i.imgur.com/yiOfSjt.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/VrF0Jdz.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/qKiXYQi.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/bua1WW5.png" height="80%" width="80%" />
 <br />
 <br />
