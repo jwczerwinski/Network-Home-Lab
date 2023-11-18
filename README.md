@@ -9,7 +9,6 @@ Simulate Network Home Lab with Cisco Packet Tracer. Configure 3 routers with SSH
 - <b>Cisco 3650-24PS Multilayer Switch</b> <br />
 
 [Command Reference](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3650/software/release/16-3/command_reference/b_163_consolidated_3650_cr.html)<br />
-
 [Software Configuration Guide](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3650/software/release/16-3/configuration_guide/b_163_consolidated_3650_cg.html)<br />
 
 - <b>Cisco 5506-X ASA</b> (22H2) <br />
