@@ -52,7 +52,7 @@ R1(config-line)# login local <br/>
 R1(config)#do show running-config <br/>
 R1#wr <br/>
 <img src="https://i.imgur.com/yiOfSjt.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/WOn3j9G.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/VrF0Jdz.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/bua1WW5.png" height="80%" width="80%" />
 <br />
 <br />
