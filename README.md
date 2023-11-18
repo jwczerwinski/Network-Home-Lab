@@ -46,10 +46,9 @@ R1(config-line)#logging synchronous <br/>
 R1(config-line)#exec-timeout 15 0 <br/>
 R1(config)#line vty 0 4 <br/>
 R1(config-line)#password PASSWORD <br/>
-R1(config-line)#login <br/>
+R1(config-line)# login local <br/>
 R1(config-line)#logging synchronous <br/>
 R1(config-line)#exec-timeout 15 0 <br/>
-R1(config-line)# login local <br/>
 R1(config-line)# transport input ssh <br/>
 R1(config)#do show running-config <br/>
 R1#wr <br/>
