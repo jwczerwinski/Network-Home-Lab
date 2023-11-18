@@ -30,8 +30,8 @@ Simulate Network Home Lab with Cisco Packet Tracer. Configure 3 routers with SSH
 
 <br />
 <br />
-Drag and frop devices as seen in the diagram. Connect devices with appropriate cabling: Cross-over - Switch to switch, router to router; Straight through - PC to switch, switch to router; Console - PC to network device (for configuration)): <br/>
-<img src="https://i.imgur.com/oL73dBm.png" height="80%" width="80%" />
+Drag and frop devices as seen in the diagram. Connect devices with appropriate cabling. Run command 'show cdp neighbors' to label interfaces. Label devices with hostnames: <br/>
+<img src="https://i.imgur.com/6raWWEw.png" height="80%" width="80%" />
 <br />
 <br />
 Router basic/security, SSH and line configurations. Verfiy and save result on R1. Repeat process on all routers: <br/>
@@ -99,5 +99,13 @@ MS1#wr <br/>
 <img src="https://i.imgur.com/bLpRQgD.png" height="80%" width="80%" />
 <br />
 <br />
-
-
+Configure Server0 to be DNS server: <br/>
+<img src="https://i.imgur.com/U4xmy6X.png" height="80%" width="80%" />
+<br />
+<br />
+Configure R2 to be DHCP server
+R2(config)#ip dhcp pool LAN2
+R2(dhcp-config)#network 172.16.0.8 255.255.255.252
+R2(dhcp-config)#default-router 172.16.0.9
+R2(dhcp-config)#dns-server 10.10.10.4
+R2(dhcp-config)#domain-name corpdomain.com
