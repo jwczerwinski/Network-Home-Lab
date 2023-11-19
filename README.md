@@ -1,7 +1,7 @@
 <h1>Network Home Lab</h1>
 
 <h2>Description</h2>
-Simulate Network Home Lab with Cisco Packet Tracer. Configure 3 routers with SSH, DHCP, OSPF and security features/protocols. Configure 3 swtiches with SSH, VLANs, etherchannel, RSTP, HSRP and security features/protocols. Deploy PC for remote management and PCs for verifying functionality of network configurations. Configure 1 firewall with ACLs, IPS/IDS, antivirus, VPN, content filtering, segmented security zones and implicit deny rules. <br />
+Simulate Network Home Lab with Cisco Packet Tracer. Configure 3 routers with SSH, DHCP frame relay, OSPF and security features/protocols. Configure 3 swtiches with SSH, VLAN, etherchannel, HSRP and security features/protocols. Deploy PC for remote management and PCs for verifying functionality of network services. Configure 1 firewall with ACLs, IPS/IDS, antivirus, VPN, content filtering, segmented security zones and implicit deny rules. <br />
 
 <h2>Environments Used </h2>
 
