@@ -106,6 +106,8 @@ R1(config)#ip address 172.16.0.1 255.255.255.252  <br/>
 R1(config)#description ## to MS1 ## <br/>
 R1(config)#no shutdown <br/>
 R1(config)#do wr <br/>
+R1(config)#do show interface <br/>
+R1(config)#do show ip interface brief <br/>
 <img src="https://i.imgur.com/ginOOqb.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/7AEoAWH.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/RGOV5Ah.png" height="80%" width="80%" />
