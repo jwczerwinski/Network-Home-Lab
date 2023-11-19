@@ -175,4 +175,4 @@ MS3(config-if-range)#standby 1 priority 99 <br/>
 show standby brief
 <img src="https://i.imgur.com/TRkdq2m.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/zYbRv0r.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/533gj9O.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/QsK4rDt.png" height="80%" width="80%" />
