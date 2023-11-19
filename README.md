@@ -161,3 +161,11 @@ MS1(config-if)# ip address 172.16.0.10 255.255.255.252 <br/>
 <img src="https://i.imgur.com/29i0Twt.png" height="80%" width="80%" />
 <br />
 <br />
+Configure OSPF dynamic routing on all network devices: <br/>
+R2(config)#router ospf 2  <br/>
+R2(config-router)#network 192.168.0.0 0.0.0.255 area 1  <br/>
+R2(config-router)#show ip ospf <br/>
+<img src="https://i.imgur.com/ZY05OJt.png" height="80%" width="80%" />
+<br />
+<br />
+
