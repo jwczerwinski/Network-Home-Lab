@@ -113,3 +113,14 @@ R1(config)#do show ip interface brief <br/>
 <img src="https://i.imgur.com/RGOV5Ah.png" height="80%" width="80%" />
 <br />
 <br />
+Configure SVI Switch Management Interfaces and default-gateway: <br/>
+MS1(config)# interface vlan 1
+MS1(config-if)# description ## Management interface for this switch ##
+MS1(config-if)# ip address 192.168.0.11  255.255.255.248
+MS1(config-if)# no shut
+MS1(config-if)# exit
+MS1(config)# ip default-gateway 192.168.0.9
+MS1(config)# do show run
+<img src="https://i.imgur.com/C9gN9np.png" height="80%" width="80%" />
+<br />
+<br />
