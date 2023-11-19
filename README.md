@@ -113,7 +113,7 @@ R1(config)#do show ip interface brief <br/>
 <img src="https://i.imgur.com/DWI9Jcw.png" height="80%" width="80%" />
 <br />
 <br />
-Configure SVI Switch Management Interfaces and default-gateway: <br/>
+Configure SVI Switch Management Interfaces and default-gateways: <br/>
 MS1(config)# interface vlan 1 <br/>
 MS1(config-if)# description ## Management interface for this switch ## <br/>
 MS1(config-if)# ip address 192.168.0.33  255.255.255.248 <br/>
@@ -121,18 +121,7 @@ MS1(config-if)# no shut <br/>
 MS1(config-if)# exit <br/>
 MS1(config)# ip default-gateway 172.16.0.17 <br/>
 MS1(config)# do show run <br/>
-<img src="https://i.imgur.com/C9gN9np.png" height="80%" width="80%" />
-<br />
-<br />
-Configure SVI Switch Management Interfaces and default-gateway: <br/>
-MS1(config)# interface vlan 1 <br/>
-MS1(config-if)# description ## Management interface for this switch ## <br/>
-MS1(config-if)# ip address 192.168.0.11  255.255.255.248 <br/>
-MS1(config-if)# no shut <br/>
-MS1(config-if)# exit <br/>
-MS1(config)# ip default-gateway 192.168.0.9 <br/>
-MS1(config)# do show run <br/>
-<img src="https://i.imgur.com/C9gN9np.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/rK05GfX.png" height="80%" width="80%" />
 <br />
 <br />
 Configure IP routing, routed ports and IP addresses on all switch interfaces. Also, etherchannel for redudant switch connections (configure same port-channel # on both sides of connection): <br/>
@@ -142,20 +131,7 @@ MS1(config-if-range)# no switchport <br/>
 MS1(config)# interface range G1/0/4 - G1/0/5 <br/>
 MS1(config-if-range)# channel-group 1 mode active <br/>
 MS1(config)# interface port-channel 1 <br/>
-MS1(config-if)# ip address 192.168.0.17 255.255.255.252 <br/>
-MS1(config)# interface G1/0/1 <br/>
-MS1(config-if)# ip address 172.16.0.10 255.255.255.252 <br/>
-<img src="https://i.imgur.com/WMkfx5S.png" height="80%" width="80%" />
-<br />
-<br />
-Configure IP routing, routed ports and IP addresses on all switch interfaces. Also, etherchannel for redudant switch connections (configure same port-channel # on both sides of connection): <br/>
-MS1(config)# ip routing <br/>
-MS1(config)# interface range G1/0/1 - G1/0/7 <br/>
-MS1(config-if-range)# no switchport <br/>
-MS1(config)# interface range G1/0/4 - G1/0/5 <br/>
-MS1(config-if-range)# channel-group 1 mode active <br/>
-MS1(config)# interface port-channel 1 <br/>
-MS1(config-if)# ip address 192.168.0.17 255.255.255.252 <br/>
+MS1(config-if)# ip address 192.168.0.21 255.255.255.252 <br/>
 MS1(config)# interface G1/0/1 <br/>
 MS1(config-if)# ip address 172.16.0.10 255.255.255.252 <br/>
 <img src="https://i.imgur.com/29i0Twt.png" height="80%" width="80%" />
@@ -181,7 +157,7 @@ MS2(config-if)#ip helper-address 172.16.0.2  <br/>
 <img src="https://i.imgur.com/aNAKrgO.png" height="80%" width="80%" />
 <br />
 <br />
-Configure HSRP version 2 on all interfaces and set highest priority group 1 to shortest path from DHCP/DNS Server to PC0 & PC1: <br/>
+Configure HSRP version 2 on all switches and set priority in order MS1 - MS3: <br/>
 Group 1 <br/>
 MS1(config)#interface range g1/0/1 - g1/0/7  <br/>
 MS1(config-if-range)#standby version 2  <br/>
