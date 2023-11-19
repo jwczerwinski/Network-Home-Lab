@@ -179,3 +179,23 @@ MS1(config-if)#ip helper-address 172.16.0.2  <br/>
 MS2(config)#interface G1/0/5  <br/>
 MS2(config-if)#ip helper-address 172.16.0.2  <br/>
 <img src="https://i.imgur.com/aNAKrgO.png" height="80%" width="80%" />
+<br />
+<br />
+Configure HSRP version 2 on all interfaces and set highest priority group 1 to shortest path from DHCP/DNS Server to PC0 & PC1: <br/>
+Group 1 <br/>
+MS1(config)#interface range g1/0/1 - g1/0/7  <br/>
+MS1(config-if-range)#standby version 2  <br/>
+MS1(config-if-range)#standby 1 ip 192.168.0.29 <br/>
+MS1(config-if-range)#standby 1 priority 101 <br/>
+MS1(config-if-range)#standby 1 preempt <br/>
+MS2(config)#interface range g1/0/1 - g1/0/4  <br/>
+MS2(config-if-range)#standby version 2  <br/>
+MS2(config-if-range)#standby 1 ip 192.168.0.29 <br/>
+MS2(config-if-range)#standby 1 priority 100 <br/>
+MS3(config)#interface range g1/0/1 - g1/0/8  <br/>
+MS3(config-if-range)#standby version 2  <br/>
+MS3(config-if-range)#standby 1 ip 192.168.0.29 <br/>
+MS3(config-if-range)#standby 1 priority 99 <br/>
+show standby brief
+<img src="https://i.imgur.com/TRkdq2m.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/zYbRv0r.png" height="80%" width="80%" />
