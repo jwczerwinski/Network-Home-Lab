@@ -20,7 +20,7 @@ Simulate Network Home Lab with Cisco Packet Tracer. Configure 3 routers with SSH
 - <b>Cisco 5506-X ASA</b> (22H2) <br />
 
 <h2>Diagram </h2>
-<img src="https://i.imgur.com/1vr89vZ.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/j09ZucK.png" height="80%" width="80%" />
 
 <h2>Walk-through:</h2>
 <p align="center">
@@ -108,19 +108,56 @@ R1(config)#no shutdown <br/>
 R1(config)#do wr <br/>
 R1(config)#do show interface <br/>
 R1(config)#do show ip interface brief <br/>
-<img src="https://i.imgur.com/ginOOqb.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/7AEoAWH.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/RGOV5Ah.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/5mMABd9.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/p1ljvs7.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/DWI9Jcw.png" height="80%" width="80%" />
 <br />
 <br />
 Configure SVI Switch Management Interfaces and default-gateway: <br/>
-MS1(config)# interface vlan 1
-MS1(config-if)# description ## Management interface for this switch ##
-MS1(config-if)# ip address 192.168.0.11  255.255.255.248
-MS1(config-if)# no shut
-MS1(config-if)# exit
-MS1(config)# ip default-gateway 192.168.0.9
-MS1(config)# do show run
+MS1(config)# interface vlan 1 <br/>
+MS1(config-if)# description ## Management interface for this switch ## <br/>
+MS1(config-if)# ip address 192.168.0.11  255.255.255.248 <br/>
+MS1(config-if)# no shut <br/>
+MS1(config-if)# exit <br/>
+MS1(config)# ip default-gateway 192.168.0.9 <br/>
+MS1(config)# do show run <br/>
 <img src="https://i.imgur.com/C9gN9np.png" height="80%" width="80%" />
+<br />
+<br />
+Configure SVI Switch Management Interfaces and default-gateway: <br/>
+MS1(config)# interface vlan 1 <br/>
+MS1(config-if)# description ## Management interface for this switch ## <br/>
+MS1(config-if)# ip address 192.168.0.11  255.255.255.248 <br/>
+MS1(config-if)# no shut <br/>
+MS1(config-if)# exit <br/>
+MS1(config)# ip default-gateway 192.168.0.9 <br/>
+MS1(config)# do show run <br/>
+<img src="https://i.imgur.com/C9gN9np.png" height="80%" width="80%" />
+<br />
+<br />
+Configure IP routing, routed ports and IP addresses on all switch interfaces. Also, etherchannel for redudant switch connections (configure same port-channel # on both sides of connection): <br/>
+MS1(config)# ip routing <br/>
+MS1(config)# interface range G1/0/1 - G1/0/7 <br/>
+MS1(config-if-range)# no switchport <br/>
+MS1(config)# interface range G1/0/4 - G1/0/5 <br/>
+MS1(config-if-range)# channel-group 1 mode active <br/>
+MS1(config)# interface port-channel 1 <br/>
+MS1(config-if)# ip address 192.168.0.17 255.255.255.252 <br/>
+MS1(config)# interface G1/0/1 <br/>
+MS1(config-if)# ip address 172.16.0.10 255.255.255.252 <br/>
+<img src="https://i.imgur.com/WMkfx5S.png" height="80%" width="80%" />
+<br />
+<br />
+Configure IP routing, routed ports and IP addresses on all switch interfaces. Also, etherchannel for redudant switch connections (configure same port-channel # on both sides of connection): <br/>
+MS1(config)# ip routing <br/>
+MS1(config)# interface range G1/0/1 - G1/0/7 <br/>
+MS1(config-if-range)# no switchport <br/>
+MS1(config)# interface range G1/0/4 - G1/0/5 <br/>
+MS1(config-if-range)# channel-group 1 mode active <br/>
+MS1(config)# interface port-channel 1 <br/>
+MS1(config-if)# ip address 192.168.0.17 255.255.255.252 <br/>
+MS1(config)# interface G1/0/1 <br/>
+MS1(config-if)# ip address 172.16.0.10 255.255.255.252 <br/>
+<img src="https://i.imgur.com/29i0Twt.png" height="80%" width="80%" />
 <br />
 <br />
