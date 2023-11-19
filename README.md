@@ -20,7 +20,7 @@ Simulate Network Home Lab with Cisco Packet Tracer. Configure 3 routers with SSH
 - <b>Cisco 5506-X ASA</b> (22H2) <br />
 
 <h2>Diagram </h2>
-<img src="https://i.imgur.com/j09ZucK.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/tyy7e8c.png" height="80%" width="80%" />
 
 <h2>Walk-through:</h2>
 <p align="center">
@@ -199,3 +199,4 @@ MS3(config-if-range)#standby 1 priority 99 <br/>
 show standby brief
 <img src="https://i.imgur.com/TRkdq2m.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/zYbRv0r.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/533gj9O.png" height="80%" width="80%" />
