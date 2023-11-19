@@ -45,7 +45,7 @@ R1(config)#enable secret PASSWORD <br/>
 R1(config)#no ip domain-lookip <br/>
 R1(config)#banner motd b <br/>
 Enter: HELLO b <br/>
-R1(config)# username jwczerwinski <br/>
+R1(config)#username jwczerwinski privilege 15 secret PASSWORD <br/>
 R1(config)# ip domain-name corpdomain.com <br/>
 R1(config)# crypto key generate rsa <br/>
 Enter: 1024 <br/>
@@ -77,7 +77,7 @@ MS1(config)#login block-for 60 attempts 3 within 30 <br/>
 MS1(config)#enable secret PASSWORD <br/>
 MS1(config)#banner motd b <br/>
 Enter: HELLO b <br/>
-MS1(config)# username jwczerwinski <br/>
+MS1(config)#username jwczerwinski privilege 15 secret PASSWORD <br/>
 MS1(config)# ip domain-name corpdomain.com <br/>
 MS1(config)# crypto key generate rsa <br/>
 Enter: 1024 <br/>
@@ -116,10 +116,10 @@ R1(config)#do show ip interface brief <br/>
 Configure SVI Switch Management Interfaces and default-gateway: <br/>
 MS1(config)# interface vlan 1 <br/>
 MS1(config-if)# description ## Management interface for this switch ## <br/>
-MS1(config-if)# ip address 192.168.0.11  255.255.255.248 <br/>
+MS1(config-if)# ip address 192.168.0.33  255.255.255.248 <br/>
 MS1(config-if)# no shut <br/>
 MS1(config-if)# exit <br/>
-MS1(config)# ip default-gateway 192.168.0.9 <br/>
+MS1(config)# ip default-gateway 172.16.0.17 <br/>
 MS1(config)# do show run <br/>
 <img src="https://i.imgur.com/C9gN9np.png" height="80%" width="80%" />
 <br />
@@ -171,3 +171,11 @@ R2(config)#do show ip route <br/>
 <img src="https://i.imgur.com/gbrPydo.png" height="80%" width="80%" />
 <br />
 <br />
+Configure DHCP/DNS Server with IP addressing and routers/switches as DHCP relay agents. Verify results with 'ipconfig' command: <br/>
+R2(config)#interface G0/0  <br/>
+R2(config-if)#ip helper-address 172.16.0.2  <br/>
+MS1(config)#interface port-channel 2  <br/>
+MS1(config-if)#ip helper-address 172.16.0.2  <br/>
+MS2(config)#interface G1/0/5  <br/>
+MS2(config-if)#ip helper-address 172.16.0.2  <br/>
+<img src="https://i.imgur.com/aNAKrgO.png" height="80%" width="80%" />
