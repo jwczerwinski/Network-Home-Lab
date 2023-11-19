@@ -63,7 +63,7 @@ R1(config-line)#exec-timeout 15 0 <br/>
 R1(config-line)# transport input ssh <br/>
 R1(config)#do show running-config <br/>
 R1#wr <br/>
-<img src="https://i.imgur.com/zgDDtO9.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/oJ3FATv.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/f9lgi5f.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/7gwO5tg.png" height="80%" width="80%" />
 <br />
@@ -95,7 +95,7 @@ MS1(config-line)#exec-timeout 15 0 <br/>
 MS1(config-line)# transport input ssh <br/>
 MS1(config)#do show run <br/>
 MS1#wr <br/>
-<img src="https://i.imgur.com/1fA73sK.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/JtDqSZZ.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/NwzxcPO.png" height="80%" width="80%" />
 <img src="https://i.imgur.com/bLpRQgD.png" height="80%" width="80%" />
 <br />
