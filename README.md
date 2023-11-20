@@ -137,7 +137,7 @@ MS1(config-if)# ip address 172.16.0.10 255.255.255.252 <br/>
 <img src="https://i.imgur.com/EkyUUk8.png" height="80%" width="80%" />
 <br />
 <br />
-Configure OSPF dynamic routing on all network devices. Also, configure static routes to end points or a gateway of last resort. Verify results with 'show' and 'tracert' commands: <br/>
+Configure OSPF dynamic routing on all network devices. Also, configure static routes to end points and gateway of last resort. Verify results with 'show' and 'tracert' commands: <br/>
 R2(config)#router ospf 1  <br/>
 R2(config-router)#network 0.0.0.0 255.255.255.255 area 0  <br/>
 R2(config)#do show ip ospf <br/>
