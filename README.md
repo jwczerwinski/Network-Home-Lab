@@ -42,7 +42,7 @@ R1(config)#security passwords min-length 5 <br/>
 R1(config)#service password-encryption <br/>
 R1(config)#login block-for 60 attempts 3 within 30 <br/>
 R1(config)#enable secret PASSWORD <br/>
-R1(config)#no ip domain-lookip <br/>
+R1(config)#no ip domain-lookup <br/>
 R1(config)#banner motd b <br/>
 Enter: HELLO b <br/>
 R1(config)#username jwczerwinski privilege 15 secret PASSWORD <br/>
@@ -116,7 +116,7 @@ R1(config)#do show ip interface brief <br/>
 Configure SVI Switch Management Interfaces and default-gateways: <br/>
 MS1(config)# interface vlan 1 <br/>
 MS1(config-if)# description ## Management interface for this switch ## <br/>
-MS1(config-if)# ip address 192.168.0.33  255.255.255.248 <br/>
+MS1(config-if)# ip address 192.168.0.33 255.255.255.248 <br/>
 MS1(config-if)# no shut <br/>
 MS1(config-if)# exit <br/>
 MS1(config)# ip default-gateway 172.16.0.17 <br/>
@@ -157,7 +157,7 @@ MS2(config-if)#ip helper-address 172.16.0.2  <br/>
 <img src="https://i.imgur.com/aNAKrgO.png" height="80%" width="80%" />
 <br />
 <br />
-Configure HSRP version 2 on all switches and set priority in order MS1 - MS3: <br/>
+Configure HSRP version 2 on all switches and set priority order: <br/>
 Group 1 <br/>
 MS1(config)#interface range g1/0/1 - g1/0/7  <br/>
 MS1(config-if-range)#standby version 2  <br/>
